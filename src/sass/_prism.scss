@@ -12,7 +12,7 @@ code:not([class]) {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: hsl(0, 0, 35%);
+  color: hsl(0, 0%, 35%);
   background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
@@ -35,7 +35,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: hsl(0, 0, 95%);
+  background: hsl(0, 0%, 95%);
 }
 
 /* Inline code */
@@ -53,7 +53,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: hsl(0, 0, 35%);
+  color: hsl(0, 0%, 35%);
 }
 
 .token.property,

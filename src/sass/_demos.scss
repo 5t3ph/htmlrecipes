@@ -1,3 +1,8 @@
+.demo {
+  outline: 1px dashed hsl(0, 0%, 50%);
+  padding: 1rem;
+}
+
 .demo article * + * {
   margin-top: 1em;
 }
@@ -7,7 +12,7 @@
 }
 
 .demo hr {
-  border-style: dotted;
+  border-style: dashed;
   border-color: navy;
   margin: 8vh 5vw;
 }
@@ -19,7 +24,7 @@
   place-items: center;
   text-align: center;
   min-height: 20vh;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .demo > ul:not([role]) {
@@ -36,8 +41,8 @@
 .demo-card-grid {
   ul {
     display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15ch), 1fr));
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15ch), 1fr));
   }
 }
 
