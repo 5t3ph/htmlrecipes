@@ -1,6 +1,23 @@
 .demo {
   outline: 1px dashed hsl(0, 0%, 50%);
   padding: 1rem;
+  position: relative;
+
+  &::before {
+    content: "Preview";
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    background-color: navy;
+    padding: 0.35em;
+    border-radius: 0.25em;
+    line-height: 1;
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75em;
+  }
 }
 
 .demo article * + * {

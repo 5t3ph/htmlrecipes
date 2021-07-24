@@ -14,8 +14,16 @@ body {
   line-height: 1.5;
   color: #222;
 
+  .sidebar {
+    text-align: center;
+  }
+
   @media (min-width: 100ch) {
     grid-template-columns: auto minmax(0, 1fr);
+
+    .sidebar {
+      text-align: left;
+    }
 
     main {
       margin-right: auto;
@@ -58,13 +66,9 @@ main {
 
 /* Typography */
 
-:is(h1, h2, h3) {
+:is(h1, h2:not(.anchor *), h3) {
   line-height: 1.2;
   margin-bottom: 0.65em;
-}
-
-:is(h1, h2) {
-  max-width: 40ch;
 }
 
 :is(h2, h3):not(:first-child) {
@@ -95,7 +99,7 @@ a:focus {
   grid-template-columns: min-content auto;
 
   &:not(:first-of-type) {
-    margin-top: 8vh;
+    margin-top: max(8vh, 4rem);
   }
 
   a {
