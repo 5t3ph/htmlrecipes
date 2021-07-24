@@ -1,0 +1,52 @@
+.demo article * + * {
+  margin-top: 1em;
+}
+
+.demo article > a {
+  display: inline-block;
+}
+
+.demo hr {
+  border-style: dotted;
+  border-color: navy;
+  margin: 8vh 5vw;
+}
+
+.demo header {
+  display: grid;
+  gap: 1rem;
+  background-color: scale-color(navy, $lightness: 95%);
+  place-items: center;
+  text-align: center;
+  min-height: 20vh;
+  padding: 0.5rem;
+}
+
+.demo > ul:not([role]) {
+  display: grid;
+  gap: 1em;
+}
+
+.demo ul[role] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.demo-card-grid {
+  ul {
+    display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15ch), 1fr));
+  }
+}
+
+.demo-navigation-links {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+}

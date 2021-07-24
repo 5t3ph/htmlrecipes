@@ -1,5 +1,16 @@
 ---
 layout: base.njk
-title: Hello World
+title: HTML Recipes
+templateEngineOverride: md, njk
 ---
 
+{% for snippet in collections.orderedSnippets %}
+<div class="anchor">
+  <h2 id="{{ snippet.data.title | slug }}">{{ snippet.data.title }}</h2>
+  <a href="#{{ snippet.data.title | slug }}">
+    <span aria-hidden="true">#</span>
+    <span class="hidden">Snippet titled {{ snippet.data.title }}</span>
+  </a>
+</div>
+{{ snippet.templateContent | safe }}
+{% endfor %}

@@ -1,0 +1,32 @@
+---
+title: Card Grid
+order: 9
+templateEngineOverride: md, njk
+---
+{% set description %}
+
+For your use case, a series of `<article>` may be more appropriate. If you are using a list as shown, and you want to retain list semantics for assistive technology users having the current list item and it's order announced, adding `role="list"` is required. Otherwise, the use of `list-style: none` can remove list semantics for some assistive technology.
+
+Check out [an example of styling cards](https://smolcss.dev/#smol-card-component) over on SmolCSS.
+
+{% endset %}
+{%- set html -%}
+<ul role="list">
+  <li>
+    <img src="https://source.unsplash.com/400x300/?corgi" alt="" width="400" height="300">
+    <h3>Lorem ipsum dolor sit.</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+  </li>
+  <li>
+    <img src="https://source.unsplash.com/400x300/?puppy" alt="" width="400" height="300">
+    <h3>Quam ut enim quo.</h3>
+    <p>Suscipit earum magnam porro molestias fugiat! Dicta, dolor.</p>
+  </li>
+  <li>
+    <img src="https://source.unsplash.com/400x300/?lobster" alt="" width="400" height="300">
+    <h3>Quis dolor ipsam ea!</h3>
+    <p>Repudiandae nihil laudantium quae necessitatibus sint facilis. Unde?</p>
+  </li>
+</ul>
+{%- endset -%}
+{% include "code.njk" %}

@@ -1,0 +1,26 @@
+---
+title: Navigation Links
+order: 3
+templateEngineOverride: md, njk
+---
+{% set description %}
+
+If you have more than one `<nav>` present in your layout, it's best to label them so that users of assistive technology can use landmark navigation to traverse your page's hierarchy and know the difference between navigations.
+
+This can be done with `aria-label` on the `<nav>`, or `aria-labelledby` which would point to the `id` of a labeling element.
+
+Read more on [using `aria-label` and descriptions](https://benmyers.dev/blog/aria-labels-and-descriptions/) from Ben Myers.
+
+{% endset %}
+{%- set html -%}
+<nav>
+  <ul role="list">
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Sign Up</a></li>
+  </ul>
+</nav>
+{%- endset -%}
+{% include "code.njk" %}
+

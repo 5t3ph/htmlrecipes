@@ -1,0 +1,139 @@
+/* Very Smol Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.demo {
+  outline: 1px dashed hsl(0, 0, 50%);
+  padding: 1rem;
+}
+
+/* Layout */
+
+body {
+  display: grid;
+  column-gap: 8vw;
+  row-gap: 5vh;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #222;
+
+  @media (min-width: 100ch) {
+    grid-template-columns: 30ch minmax(0, 120ch);
+  }
+}
+
+.sidebar,
+main {
+  padding: 2rem;
+}
+
+#nav {
+  ul {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    font-size: 1.15rem;
+  }
+}
+
+#nav,
+main {
+  width: min(100%, 100vw);
+}
+
+.sidebar footer {
+  margin-top: 2rem;
+  font-size: .9rem;
+
+  p + p {
+    margin-top: 1em;
+  }
+}
+
+/* Typography */
+
+:is(h1, h2, h3) {
+  line-height: 1.2;
+}
+
+:is(h1, h2) {
+  max-width: 40ch;
+}
+
+:is(h2, h3):not(:first-child) {
+  margin-top: 2em;
+}
+
+main > p {
+  margin-top: 1em;
+  font-size: 1.15rem;
+}
+
+a {
+  color: navy;
+  text-underline-offset: 0.08em;
+}
+
+a:focus {
+  outline: 1px solid currentColor;
+  outline-offset: 0.2em;
+}
+
+[id] {
+  scroll-margin-top: 2em;
+}
+
+.anchor {
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  &:not(:first-of-type) {
+    margin-top: 8vh;
+  }
+
+  a {
+    grid-row-start: 1;
+    align-self: start;
+    font-size: 1rem;
+    line-height: 1;
+    /* We're using `transform` vs. margins */
+    transform: translateX(-50%) translateY(25%);
+    text-decoration: none;
+    /* Be sure to check that your own colors still meet
+    or exceed 4.5:1 contrast when using lowering opacity */
+    opacity: 0.75;
+  }
+}
+
+.hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/* Media */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Supporting Content */
+
+blockquote {
+  margin: 2rem 0;
+  padding: 0.5em 1rem;
+  border-left: 3px solid rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0 0.25rem 0.25rem 0;
+}
