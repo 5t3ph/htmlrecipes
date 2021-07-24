@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+{%- set pageTitle %}{{ title }}{% endset -%}
+{%- set pageDescription %}{{ meta.description }}{% endset -%}
+{%- set pageSocialImg %}{{ meta.url }}/img/htmlrecipes.png{% endset -%}
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{pageTitle}}</title>
+	<meta
+		name="description"
+		content="{{pageDescription}}"
+	/>
+	<link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>"
+    />
+	<link href="{{ '/css/style.css' | url }}" rel="stylesheet" />
+	<link rel="preconnect" href="https://plausible.io">
+	<link rel="dns-prefetch" href="https://plausible.io">
+	{% if 'htmlrecipes' in meta.url %}
+	<script async defer data-domain="htmlrecipes.dev" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+	<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+	{% endif %}
+	<meta name="twitter:card" content="summary_large_image" />
+	{% if meta.twitterUsername %}
+	<meta name="twitter:creator" content="@{{ meta.twitterUsername }}" />
+	{% endif %}
+	<meta
+		name="twitter:title"
+		content="{{pageTitle}}"
+	/>
+	<meta
+		name="twitter:description"
+		content="{{pageDescription}}"
+	/>
+
+	<meta
+		name="og:title"
+		content="{{pageTitle}}"
+	/>
+	<meta
+		name="og:description"
+		content="{{pageDescription}}"
+	/>
+	<meta property="og:image" content="{{pageSocialImg}}" />
+	<meta name="twitter:image" content="{{pageSocialImg}}" />
+
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="RSS Feed for {{ meta.siteName }}"
+		href="/feed/"
+	/>
 </head>
 <body>
 	<div class="sidebar">
