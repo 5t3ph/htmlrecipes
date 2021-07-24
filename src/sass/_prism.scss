@@ -31,6 +31,7 @@ pre[class*="language-"] {
   margin: 2rem 0;
   overflow: auto;
   border-radius: 0.3em;
+  user-select: all;
 }
 
 :not(pre) > code[class*="language-"],
