@@ -23,6 +23,11 @@ body {
 
     .sidebar {
       text-align: left;
+
+      ul {
+        position: sticky;
+        top: 1rem;
+      }
     }
 
     main {
@@ -39,22 +44,43 @@ main {
 
 .sidebar {
   .sitenav {
+    margin-top: 2rem;
+    height: calc(100% - 200px);
+
+    h2 {
+      color: hsl(0, 0%, 50%);
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
     ul {
       display: grid;
       gap: 1rem;
       list-style: none;
-      margin: 2rem 0 0;
+      margin: 0;
       padding: 0;
       font-size: 1.15rem;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 0.15em;
+        }
+      }
     }
   }
 
-  footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
+  header {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed hsl(0, 0%, 60%);
 
-    p + p {
-      margin-top: 1em;
+    p {
+      font-size: 0.9rem;
     }
   }
 }
