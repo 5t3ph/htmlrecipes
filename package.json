@@ -1,0 +1,34 @@
+{
+  "name": "11ty-sass-skeleton",
+  "version": "1.2.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass  --no-source-map src/sass:public/css",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:sass build:eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+  },
+  "author": "5t3ph",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^9.8.6",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.32.7"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
