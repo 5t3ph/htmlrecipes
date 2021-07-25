@@ -1,7 +1,6 @@
 ---
 layout: base.njk
 title: HTML Recipes
-templateEngineOverride: md, njk
 ---
 
 {% for snippet in collections.orderedSnippets %}
@@ -12,5 +11,15 @@ templateEngineOverride: md, njk
     <span class="hidden">Snippet titled {{ snippet.data.title }}</span>
   </a>
 </div>
+{% if snippet.data.contributorsName %}
+{%- set contributor -%}
+  {% if snippet.data.contributorsURL %}
+    <a href="{{ snippet.data.contributorsURL }}">{{ snippet.data.contributorsName }}</a>
+  {% else %}
+    {{ snippet.data.contributorsName }}
+  {% endif %}
+{%- endset -%}
+<p class="contributor">💜 <em>Contributed by: {{ contributor | safe }}</em></p>
+{% endif %}
 {{ snippet.templateContent | safe }}
 {% endfor %}
