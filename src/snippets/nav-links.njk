@@ -11,6 +11,8 @@ This can be done with `aria-label` on the `<nav>`, or `aria-labelledby` which wo
 
 Read more on [using `aria-label` and descriptions](https://benmyers.dev/blog/aria-labels-and-descriptions/) from Ben Myers.
 
+Setting `list-style: none` in CSS can remove the list semantics announced to users of assistive technology. Including `role="list"` restores list semantics in that scenario.
+
 {% endset %}
 {%- set html -%}
 <nav>
