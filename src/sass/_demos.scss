@@ -100,14 +100,12 @@
 
 .demo-contact-form {
   form{
-    > * {
-      margin-bottom:1rem;
-    }
     label{
       display:block;
-      > * {
-        display:block;
-      }
+    }
+    input, textarea{
+      display:block;
+      margin-bottom:1rem;
     }
   }
 }

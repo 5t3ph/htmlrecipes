@@ -5,7 +5,7 @@ contributorsURL: https://www.ryantrimble.com/
 templateEngineOverride: md, njk
 ---
 {% set description %}
-Generally you will need some sort of backend process to handle form submissions. You can handle this on your own on the [server side](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) by setting the `action` and `method` attributes, or you can utilize a third-party solution such as what [Netlify](https://docs.netlify.com/forms/setup/) provides.
+Generally, you will need some sort of backend process to handle form submissions. You can handle this on your own on the [server side](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) by setting the `action` and `method` attributes, or you may choose a web host that offers form processing as a service.
 
 Make sure to include labels for each input, as well as setting the proper type of input. You can also mark inputs as required by including the `required` attribute. Modern browsers have built-in (though fairly basic) form validation.
 {%- endset -%}
@@ -13,16 +13,16 @@ Make sure to include labels for each input, as well as setting the proper type o
 <form>
   <label for="full-name">
     Full Name:
-    <input id="full-name" name="full-name" type="text" required />
   </label>
+  <input id="full-name" name="full-name" type="text" required />
   <label for="email-address">
     Email Address:
-    <input id="email-address" name="email-address" type="email" required />
   </label>
+  <input id="email-address" name="email-address" type="email" required />
   <label for="message">
     Message:
-    <textarea id="message" name="message" rows="5" cols="30" required></textarea>
   </label>
+  <textarea id="message" name="message" rows="5" cols="30" required></textarea>
   <button type="submit">Submit</button>
 </form>
 {%- endset -%}
