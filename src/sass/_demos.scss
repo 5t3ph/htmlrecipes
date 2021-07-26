@@ -97,3 +97,17 @@
     text-align: center;
   }
 }
+
+.demo-contact-form {
+  form{
+    > * {
+      margin-bottom:1rem;
+    }
+    label{
+      display:block;
+      > * {
+        display:block;
+      }
+    }
+  }
+}
