@@ -7,13 +7,16 @@
 /* Layout */
 
 body {
-  display: grid;
-  row-gap: 5vh;
   min-height: 100vh;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   background-color: #f9f9f9;
   color: #222;
+}
+
+.home {
+  display: grid;
+  row-gap: 5vh;
 
   .sidebar {
     text-align: center;
@@ -25,7 +28,7 @@ body {
     .sidebar {
       text-align: left;
 
-      ul {
+      ol {
         position: sticky;
         top: 1rem;
       }
@@ -39,8 +42,9 @@ body {
 }
 
 .sidebar,
-main {
+.home main {
   padding: 2rem;
+  width: min(100%, 100vw, 120ch);
 }
 
 .sidebar {
@@ -55,13 +59,17 @@ main {
       letter-spacing: 0.05em;
     }
 
-    ul {
+    ol {
       display: grid;
-      gap: 1rem;
-      list-style: none;
+      gap: 0.5rem;
       margin: 0;
-      padding: 0;
-      font-size: 1.15rem;
+      padding-left: 1.75rem;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+
+      ::marker {
+        color: hsl(0, 0%, 45%);
+      }
 
       a {
         text-decoration: none;
@@ -86,9 +94,19 @@ main {
   }
 }
 
-.sidebar,
-main {
-  width: min(100%, 100vw, 120ch);
+.page {
+  header {
+    display: grid;
+    place-content: center;
+    min-height: 20vh;
+  }
+
+  header,
+  main {
+    width: min(80ch, 100vw - 3rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Typography */
@@ -102,7 +120,11 @@ main {
   margin-top: 2em;
 }
 
-main > p {
+.description {
+  max-width: 80ch;
+}
+
+.description p {
   margin-top: 1em;
   font-size: 1.15rem;
 }

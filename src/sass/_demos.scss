@@ -99,13 +99,43 @@
 }
 
 .demo-contact-form {
-  form{
-    label{
-      display:block;
+  form {
+    label {
+      display: block;
     }
-    input, textarea{
-      display:block;
-      margin-bottom:1rem;
+    input,
+    textarea {
+      display: block;
+      margin-bottom: 1rem;
     }
+  }
+}
+
+.demo-social-icon-links {
+  ul {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+    }
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.demo-article {
+  article {
+    margin: 2rem auto;
+    width: min(80ch, 100%);
   }
 }

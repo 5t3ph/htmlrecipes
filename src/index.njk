@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: home.njk
 title: HTML Recipes
 ---
 
@@ -19,7 +19,7 @@ title: HTML Recipes
     {{ snippet.data.contributorsName }}
   {% endif %}
 {%- endset -%}
-<p class="contributor">💜 <em>Contributed by: {{ contributor | safe }}</em></p>
+<p class="contributor">💙 <em>Contributed by: {{ contributor | safe }}</em></p>
 {% endif %}
 {{ snippet.templateContent | safe }}
 {% endfor %}

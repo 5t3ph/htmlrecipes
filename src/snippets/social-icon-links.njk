@@ -1,0 +1,25 @@
+---
+title: Social Icon Links
+templateEngineOverride: md, njk
+---
+{% set description %}
+{% include "social-icons.svg" %}
+
+This free set of social icons comes from [IcoMoon](https://icomoon.io/app/#/select) and uses the technique of an [SVG sprite](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/). You can [view the sprite SVG code](/social-icons/) separately.
+
+Often in this scenario, the icon is considered decorative and so the `aria-hidden` attribute is included on the SVG. Additionally, for older IE support, `focusable="false"` ensures the SVG does not create an extra tab stop for keyboard users.
+
+_The inclusion of `role="list"` is explained for [Navigation Links](#navigation-links)_.
+
+{% endset %}
+{%- set html -%}
+<ul role="list">
+  <li><a href="https://twitter.com"><svg aria-hidden="true" focusable="false" width="24" height="24" fill="currentColor" class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg> Twitter</a></li>
+  <li><a href="https://facebook.com"><svg aria-hidden="true" focusable="false" width="24" height="24" fill="currentColor" class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg> Facebook</a></li>
+  <li><a href="https://linkedin.com"><svg aria-hidden="true" focusable="false" width="24" height="24" fill="currentColor" class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg> LinkedIn</a></li>
+  <li><a href="https://youtube.com"><svg aria-hidden="true" focusable="false" width="24" height="24" fill="currentColor" class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg> YouTube</a></li>
+  <li><a href="https://twitch.tv"><svg aria-hidden="true" focusable="false" width="24" height="24" fill="currentColor" class="icon icon-twitch"><use xlink:href="#icon-twitch"></use></svg> Twitch</a></li>
+</ul>
+{%- endset -%}
+{% include "code.njk" %}
+

@@ -46,24 +46,17 @@
 	<meta property="og:image" content="{{pageSocialImg}}" />
 	<meta name="twitter:image" content="{{pageSocialImg}}" />
 </head>
-<body>
-	<div class="sidebar">
-		<header>
-			<h1>{{ title }}</h1>
-			<p>Created by<br> <a href="https://twitter.com/5t3ph">Stephanie Eckles</a></p>
-			<p>⭐️ <a href="https://github.com/5t3ph/htmlrecipes">Star on GitHub</a><br><em>Contributions welcome!</em></p>
-		</header>
-		<nav class="sitenav" aria-labelledby="nav-title">
-			<h2 id="nav-title">Snippets</h2>
-			<ul role="list">
-				{% for snippet in collections.orderedSnippets %}
-				<li><a href="#{{ snippet.data.title | slug }}">{{ snippet.data.title }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
-	</div>
+<body class="{% if page.fileSlug %}page{% else %}home{% endif %}">
+	{% if page.fileSlug %}
+	<header>
+		<h1>📝 <a href="/">HTML Recipes</a></h1>
+	</header>
 	<main>
+	<h2>{{ title }}</h2>
 	{{ content | safe }}
 	</main>
+	{% else %}
+	{{ content | safe }}
+	{% endif %}
 </body>
 </html>
