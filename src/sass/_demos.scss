@@ -97,3 +97,15 @@
     text-align: center;
   }
 }
+
+.demo-contact-form {
+  form{
+    label{
+      display:block;
+    }
+    input, textarea{
+      display:block;
+      margin-bottom:1rem;
+    }
+  }
+}

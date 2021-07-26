@@ -8,5 +8,6 @@ module.exports = [
   "blockquote",
   "article",
   "card-grid",
+  "contact-form",
   "footer",
 ];
