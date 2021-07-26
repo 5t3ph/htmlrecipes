@@ -3,6 +3,7 @@ module.exports = [
   "list-with-links",
   "nav-links",
   "social-icon-links",
+  "heading-subheading",
   "hero",
   "hero-marketing",
   "hero-article",
