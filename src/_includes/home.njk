@@ -9,7 +9,7 @@ layout: base.njk
   </header>
   <nav class="sitenav" aria-labelledby="nav-title">
     <h2 id="nav-title">Snippets</h2>
-    <ol>
+    <ol role="list">
       {% for snippet in collections.orderedSnippets %}
       <li><a href="#{{ snippet.data.title | slug }}">{{ snippet.data.title }}</a></li>
       {% endfor %}
