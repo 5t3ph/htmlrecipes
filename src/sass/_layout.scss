@@ -20,6 +20,11 @@ body {
 
   .sidebar {
     text-align: center;
+
+    ol {
+      justify-content: center;
+      text-align: left;
+    }
   }
 
   @media (min-width: 100ch) {
@@ -31,6 +36,7 @@ body {
       ol {
         position: sticky;
         top: 1rem;
+        justify-content: start;
       }
     }
 
@@ -62,9 +68,8 @@ body {
     ol {
       display: grid;
       gap: 0.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      margin: 0 0 0 -0.5em;
+      padding-left: 1.85em;
       max-height: calc(100vh - 2rem);
       overflow-y: auto;
 
