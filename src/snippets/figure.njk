@@ -1,0 +1,16 @@
+---
+title: Figure
+contributorsName: Michael W. Delaney
+contributorsURL: https://michaeldelaney.me
+templateEngineOverride: md, njk
+---
+{% set description %}
+  Usually a `<figure>` is an image, illustration, diagram, code snippet, etc. If your use case doesn't require a caption, the `<figcaption>` can be omitted.
+{% endset %}
+{%- set html -%}
+<figure>
+  <img src="https://source.unsplash.com/400x300/?dinosaur" alt="" width="400" height="300">
+  <figcaption>A stock image of a dinosaur</figcaption>
+</figure>
+{%- endset -%}
+{% include "code.njk" %}
