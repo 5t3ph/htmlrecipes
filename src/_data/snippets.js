@@ -8,6 +8,7 @@ module.exports = [
   "hero-article",
   "blockquote",
   "article",
+  "figure",
   "card-grid",
   "contact-form",
   "footer",
