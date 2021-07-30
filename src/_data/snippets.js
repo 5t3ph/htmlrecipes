@@ -10,6 +10,7 @@ module.exports = [
   "article",
   "figure",
   "video",
+  "address",
   "card-grid",
   "contact-form",
   "footer",
