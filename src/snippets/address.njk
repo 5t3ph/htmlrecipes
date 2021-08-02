@@ -4,6 +4,14 @@ contributorsName: Michael W. Delaney
 contributorsURL: https://michaeldelaney.me
 templateEngineOverride: md, njk
 ---
+{% set description %}
+
+The `<address>` element's use case has evolved over time and is now acceptable for marking up arbitrary contact information. The browser inherited styles are the same as for `<i>` or `<em>`.
+
+MDN states that an address element "may include any type of contact information that is needed" and includes [more examples of using address](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address). However, it should be noted there is no implicit role for this element as provided to assistive technology users. 
+
+{% endset %}
+
 {%- set html -%}
 <address>
   <a href="mailto:fake@htmlrecipes.dev">📧 fake@htmlrecipes.dev</a>
