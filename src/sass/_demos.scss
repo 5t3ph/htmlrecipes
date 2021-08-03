@@ -98,6 +98,20 @@
   }
 }
 
+.demo-faq-section {
+  details{
+    margin-bottom: 1rem;
+
+    summary {
+      font-weight: bold;
+
+      &:focus {
+        outline: 1px solid currentColor;
+      }
+    }
+  }
+}
+
 .demo-contact-form {
   form {
     label {
