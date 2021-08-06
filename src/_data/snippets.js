@@ -9,7 +9,7 @@ module.exports = [
   "blockquote",
   "article",
   "figure",
-  "video",
+  "address",
   "card-grid",
   "contact-form",
   "footer",
