@@ -139,3 +139,11 @@
     width: min(80ch, 100%);
   }
 }
+
+.demo-address {
+  address {
+    a {
+      display: block;
+    }
+  }
+}
