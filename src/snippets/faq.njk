@@ -4,6 +4,14 @@ contributorsName: Saptak S
 contributorsURL: https://saptaks.website
 templateEngineOverride: md, njk
 ---
+{%- set description -%}
+
+The `details` and `summary` elements [are very well supported](https://caniuse.com/details) as a native HTML way to provide collapsible content sections, such as for FAQs.
+
+⚠️ **Caution**: Beware of using them for purposes beyond simple content disclosure sections due to accessibility concerns. [Learn more about appropriate using details/summary](https://adrianroselli.com/2019/04/details-summary-are-not-insert-control-here.html) from Adrian Roselli.
+
+{%- endset -%}
+
 {%- set html -%}
 <details>
   <summary>Proin eget velit vel lectus elementum pharetra?</summary>

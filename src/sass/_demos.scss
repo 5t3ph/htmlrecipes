@@ -100,10 +100,13 @@
 
 .demo-faq-section {
   details{
-    margin-bottom: 1rem;
+    & + details {
+      margin-top: 1rem;
+    }
 
     summary {
       font-weight: bold;
+      cursor: pointer;
 
       &:focus {
         outline: 1px solid currentColor;
