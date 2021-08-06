@@ -11,6 +11,7 @@ module.exports = [
   "figure",
   "video",
   "card-grid",
+  "button-group",
   "contact-form",
   "footer",
 ];
