@@ -147,3 +147,21 @@
     }
   }
 }
+
+.demo-button-group {
+  [role="group"] {
+    --min: 15ch;
+    --gap: 1rem;
+    --fontSize: 1rem;
+
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  }
+
+  button {
+    font-size: var(--fontSize);
+    padding: var(--gap);
+
+  }
+}
