@@ -98,6 +98,23 @@
   }
 }
 
+.demo-faq-section {
+  details{
+    & + details {
+      margin-top: 1rem;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+
+      &:focus {
+        outline: 1px solid currentColor;
+      }
+    }
+  }
+}
+
 .demo-contact-form {
   form {
     label {

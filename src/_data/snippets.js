@@ -11,6 +11,7 @@ module.exports = [
   "figure",
   "address",
   "card-grid",
+  "faq",
   "contact-form",
   "footer",
 ];
