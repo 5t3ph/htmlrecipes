@@ -1,0 +1,28 @@
+---
+title: Sidebar
+contributorsName: Michael W. Delaney
+contributorsURL: https://michaeldelaney.me
+templateEngineOverride: md, njk
+---
+{% set description %}
+  To summarize [MDN's article on the `<aside>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), `<aside>` describes content that is somewhat or partially related to the document's main content. This makes it perfect for sidebars!
+{% endset %}
+
+{%- set html -%}
+<main>
+  <article>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <strong>Reiciendis nulla iste temporibus voluptatem</strong> sed laudantium eos fugiat fuga qui inventore placeat ullam voluptate pariatur exercitationem obcaecati, veniam debitis quisquam velit.</p>
+    <p>Ipsam nam iusto officia natus maxime inventore voluptatibus? Iste possimus veniam ipsum <a href="#">repellendus, ad tenetur ullam saepe impedit error</a>. Corrupti quas animi autem rem fugit ratione eligendi vero labore facilis.</p>
+    <hr>
+    <p>Aliquam delectus id sunt possimus, culpa repudiandae recusandae eius ex distinctio dolor ipsum voluptatem nam accusamus enim quasi dolorum. Corporis, repellendus. Ullam doloremque quam amet odio est culpa optio totam.</p>
+  </article>
+  <aside>
+    <figure>
+      <img src="https://source.unsplash.com/400x300/?beagle" alt="" width="200" height="100">
+      <figcaption>Lorem ipsum dolor sit.</figcaption>
+    </figure>
+  </aside>
+</main>
+{%- endset -%}
+{% include "code.njk" %}
