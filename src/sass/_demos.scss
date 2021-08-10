@@ -164,3 +164,20 @@
     }
   }
 }
+
+.demo-sidebar {
+  --gap: 1rem;
+
+  .container {
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: minmax(min(50vw, 25ch), 1fr) fit-content(20ch);
+    width: min(100%, 60ch);
+    margin: 2rem auto;
+  }
+
+  aside {
+    border-left: 1px solid lightslategray;
+    padding-left: var(--gap);
+  }
+}

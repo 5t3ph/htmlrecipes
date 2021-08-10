@@ -1,0 +1,32 @@
+---
+title: Sidebar
+contributorsName: Michael W. Delaney
+contributorsURL: https://michaeldelaney.me
+templateEngineOverride: md, njk
+---
+{% set description %}
+To summarize [MDN's article on the `<aside>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), `<aside>` describes content that is somewhat or partially related to the document's main content. This makes it an option for sidebars!
+
+The `<aside>` element is considered a landmark and comes with an [implicit ARIA role of "complementary"](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html). It is intended to be a top-level landmark, meaning it should not nest within `main` _unless_ you change its `role`, for example to `note`. You should also change its role if it's _not_ related to the main page content. The MDN docs show [permitted ARIA roles for `aside`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside).
+
+If using more than one on a page, each such include a label for assistive technology navigation. You can set it via an `aria-label` or use `aria-labelledby` to point to the `id` of a nested heading element.
+{% endset %}
+
+{%- set html -%}
+<div class="container">
+  <main>
+    <article>
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <strong>Reiciendis nulla iste temporibus voluptatem</strong> sed laudantium eos fugiat fuga qui inventore placeat ullam voluptate pariatur exercitationem obcaecati, veniam debitis quisquam velit.</p>
+      <p>Aliquam delectus id sunt possimus, culpa repudiandae recusandae eius ex distinctio dolor ipsum voluptatem nam accusamus enim quasi dolorum. Corporis, repellendus. Ullam doloremque quam amet odio est culpa optio totam.</p>
+    </article>
+  </main>
+  <aside>
+    <figure>
+      <img src="https://source.unsplash.com/400x300/?beagle" alt="" width="200" height="100">
+      <figcaption>Lorem ipsum dolor sit.</figcaption>
+    </figure>
+  </aside>
+</div>
+{%- endset -%}
+{% include "code.njk" %}
