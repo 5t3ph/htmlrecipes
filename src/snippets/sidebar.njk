@@ -7,7 +7,7 @@ templateEngineOverride: md, njk
 {% set description %}
 To summarize [MDN's article on the `<aside>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), `<aside>` describes content that is somewhat or partially related to the document's main content. This makes it an option for sidebars!
 
-The `<aside>` element is considered a landmark, and comes with an [implicit ARIA role of "complementary"](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html). It is intended to be a top-level landmark, meaning it should not nest within `main` _unless_ you change it's `role`, for example to `note`. You should also change it's role if it's _not_ related to the main page content. The MDN docs show [permitted ARIA roles for `aside`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside).
+The `<aside>` element is considered a landmark and comes with an [implicit ARIA role of "complementary"](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html). It is intended to be a top-level landmark, meaning it should not nest within `main` _unless_ you change its `role`, for example to `note`. You should also change its role if it's _not_ related to the main page content. The MDN docs show [permitted ARIA roles for `aside`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside).
 
 If using more than one on a page, each such include a label for assistive technology navigation. You can set it via an `aria-label` or use `aria-labelledby` to point to the `id` of a nested heading element.
 {% endset %}
