@@ -8,17 +8,19 @@ templateEngineOverride: md, njk
 Generally, you will need some sort of backend process to handle form submissions. You can handle this on your own on the [server side](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) by setting the `action` and `method` attributes, or you may choose a web host that offers form processing as a service.
 
 Make sure to include labels for each input, as well as setting the proper type of input. You can also mark inputs as required by including the `required` attribute. Modern browsers have built-in (though fairly basic) form validation.
+
+Additionally, to meet [WCAG Success Criterion 1.3.5](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html), add the appropriate [autocomplete values](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) when relevant (shown for the email and name fields).
 {%- endset -%}
 {%- set html -%}
 <form>
   <label for="full-name">
     Full Name:
   </label>
-  <input id="full-name" name="full-name" type="text" required />
+  <input id="full-name" name="full-name" type="text" autocomplete="name" required />
   <label for="email-address">
     Email Address:
   </label>
-  <input id="email-address" name="email-address" type="email" required />
+  <input id="email-address" name="email-address" type="email" autocomplete="email" required />
   <label for="message">
     Message:
   </label>
