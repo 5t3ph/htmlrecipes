@@ -1,12 +1,20 @@
 ---
 title: Blockquote
+contributorsName: David Benoit III
 templateEngineOverride: md, njk
 ---
+{% set description %}
+  Read about the `<blockquote>` tag and its uses <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">here at <abbr title="Mozilla Developer Network">MDN</abbr></a>.
+{% endset %}
+
 {%- set html -%}
-<blockquote>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-  <footer>- <cite>Laura Ipdo</cite></footer>
-</blockquote>
+<figure>
+  <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <q>Black bean chili dip mediterranean luxury bowl udon noodles blueberry pops mangos lemon red lentil soup dragon fruit pine nuts broccoli Southern Italian chia seeds dill lime mango crisp coriander Bulgarian carrot artichoke hearts cumin picnic salad picnic.</q>
+  </blockquote>
+  <figcaption>
+    — <cite class="author">MDN Contributors</cite>, <cite class="company">MDN Web Docs</cite>
+  </figcaption>
+</figure>
 {%- endset -%}
 {% include "code.njk" %}
-
