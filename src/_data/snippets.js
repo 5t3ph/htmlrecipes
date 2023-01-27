@@ -1,5 +1,6 @@
 module.exports = [
   "list",
+  "numbered-list",
   "list-with-links",
   "nav-links",
   "social-icon-links",
